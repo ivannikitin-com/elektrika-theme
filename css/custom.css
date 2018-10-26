@@ -2435,10 +2435,20 @@ body .quantity.buttons_added input[type='number']{
 	font-weight:bold;
 	text-align:center;
 }
+<<<<<<< HEAD
 .shop_table tbody td.product-price, .shop_table tbody td.product-subtotal, .shop_table tbody td.product-quantity{
 	text-align:right;
 }
 .woocommerce-cart .shop_table.cart tbody td.product-thumbnail{
+=======
+.shop_table tbody td.product-price, .shop_table tbody td.product-subtotal{
+	text-align:right;
+}
+.shop_table tbody td.product-quantity[data-title="Количество"]{
+	min-width:140px;
+}
+.woocommerce-cart .shop_table.cart tbody td.product-thumbnail, .shop_table tbody td.product-quantity{
+>>>>>>> a77bf9d51f5c33a6f615dceb8c634a9437709856
 	text-align:center;
 }
 .woocommerce-cart .shop_table.cart tbody td .sku{

@@ -91,7 +91,11 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 				</a>
 			
 	<?php	
+<<<<<<< HEAD
 	$fragments['a#cart_butt_footer'] = ob_get_clean();	
+=======
+	//$fragments['a#cart_butt_footer'] = ob_get_clean();	
+>>>>>>> a77bf9d51f5c33a6f615dceb8c634a9437709856
 	return $fragments;
 }
 if (class_exists('BeRocket_LGV')) {
@@ -548,7 +552,19 @@ function elk_compare_refresh_count($fragments){
 }
 add_filter( 'tm_wishlist_default_count', 'elk_wishlist_refresh_count' );
 function elk_wishlist_refresh_count($fragments){
+<<<<<<< HEAD
 	$fragments['a.butt_favor > div.num']=$fragments['.menu-wishlist > a'];
+=======
+	$wishlist_count = 0;
+	$wishlist_ids = tm_woowishlist_get_list();
+	if ($wishlist_ids) {
+		$products = tm_woowishlist_get_products($wishlist_ids);
+		if ($products) {
+			$wishlist_count = $products->post_count;
+		}
+	}	
+	$fragments['a.butt_favor > div.num']=$wishlist_count;
+>>>>>>> a77bf9d51f5c33a6f615dceb8c634a9437709856
 	return $fragments;
 }
 
