@@ -42,18 +42,18 @@ get_header(); ?>
 				<?php foreach( $brands as $brand ){ ?>
 				<div class="col-md-4 col-sm-6 col-xs-6">
 					<div class="thumbnail">
-						<div class="brand_img">
 						<?php $brand_logo=get_field('brand_logo', 'product_brand_'.$brand->term_id); 
 						if ($brand_logo) { ?>
+						<div class="brand_img">
 						<a href="<?php echo get_term_link( $brand->term_id, 'product_brand' ); ?>" class="logo_img">
 							<?php echo wp_get_attachment_image( $brand_logo, 'medium'); ?>
 						</a>
-						</div>
+						</div><!--/.brand_img-->
 						<?php } ?>
 						<div class="brand_lnk">
-						<a href="<?php echo get_term_link( $brand->term_id, 'product_brand' ); ?>"><?php echo $brand->name; ?></a>
+							<a href="<?php echo get_term_link( $brand->term_id, 'product_brand' ); ?>"><?php echo $brand->name; ?></a>
 						</div>
-					</div>
+					</div><!--/.thumbnail-->
 					
 				</div><!-- /.col- -->
 				<?php }?>
