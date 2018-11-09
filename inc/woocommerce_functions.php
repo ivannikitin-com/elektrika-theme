@@ -56,7 +56,8 @@ function elk_grid_class( $col = '3' ) {
 add_filter( 'post_class', 'elk_add_product_entry_classes' , 40, 3 );
 function elk_add_product_entry_classes($classes, $class = '', $post_id = ''){
 				global $product, $woocommerce_loop;
-			if ( $product
+			if ( (is_product() || is_product_category() || is_front_page() || is_tax())
+				&& $product
 				&& ! empty( $woocommerce_loop['columns'] )
 				&& is_array( $classes )
 				&& in_array( get_post_type( $post_id ), array( 'product', 'product_variation' ) )
@@ -222,7 +223,8 @@ function elk_woocommerce_pagination() {
 	wp_pagenavi();
 }
 
-add_action( 'woocommerce_after_shop_loop','elk_testimonials_anounce',20 );
+/*Отзывы отключена по пожеланию Заказчика*/
+/*add_action( 'woocommerce_after_shop_loop','elk_testimonials_anounce',20 );
 function  elk_testimonials_anounce() { ?>
 	                                    <!--  Отзывы -->
 									<?php $args=array(
@@ -246,7 +248,7 @@ function  elk_testimonials_anounce() { ?>
                                         <a href="<?php echo get_term_link('testimonials', 'category');?>" class="all">Посмотреть все отзывы</a>	
 										</div><!--/#comments-->
 									<?php } 
-}
+}*/
 
 function  elk_brands_list(){ ?>
 	                                    <div class="company ffrc">
@@ -319,8 +321,9 @@ function elk_compare_button($html, $classes, $id, $nonce, $text, $preloader){
 }
 add_filter( 'tm_woowishlist_button', 'elk_wishlist_button',1,6 );
 function elk_wishlist_button($html, $classes, $id, $nonce, $text, $preloader){
-	/*if (!is_product()){*/
+	/*if (!is_page('wishlist')){*/
 		$html = sprintf( '<button type="button" class="%s button wishlist_btn" data-id="%s" data-nonce="%s">%s</button>', implode( ' ', $classes ), $id, $nonce, $text . $preloader );
+	/*}*/
 	/*} else {
 		$classes=array_diff($classes,array('button','btn','btn-default'));
 		$classes_str=implode( ' ', $classes );

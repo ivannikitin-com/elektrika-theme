@@ -93,7 +93,8 @@ get_header(); ?>
 									<?php the_content(); ?>
 								</article>
 								<?php endwhile; ?>
-								<?php elk_testimonials_anounce(); ?>
+								<?php /*Отзывы отключены по пожеланию Заказчика*/
+								//elk_testimonials_anounce(); ?>
                                 </div><!--/.конец колонки-->
                                 
                     	</div><!--/.row-->
