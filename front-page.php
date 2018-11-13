@@ -49,7 +49,7 @@ get_header(); ?>
 										<?php endif; ?>
 									</a><!--/.action_bann-->
                              </div><!-- /конец колонки -->                               
-                             <div class="col-md-4">
+                             <div class="woocommerce col-md-4">
 										<?php $args=array(
 											'post_type'=>'product',
 											'posts_per_page'=>3,

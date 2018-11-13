@@ -70,10 +70,10 @@
                     <div class="col-xs-6 col-md-3 column_f">
                         <div class="logo_foo">
                             <?php if (!is_front_page()) { ?>
-								<a class="logo" href="/" title="На Главную"><img src="<?php echo get_theme_mod('logo', ''); ?>" class="img-responsive"></a>
+								<a class="logo" href="/" title="На Главную"><img src="<?php echo get_theme_mod('logo_header', ''); ?>" class="img-responsive"></a>
 								<?php } else { ?>
                                 <!-- Для Главной страницы -->
-                                <span class="logo"><img src="<?php echo get_theme_mod('logo', ''); ?>" class="img-responsive"></span>
+                                <span class="logo"><img src="<?php echo get_theme_mod('logo_header', ''); ?>" class="img-responsive"></span>
 								<?php } ?>
                         </div><!--/.logo_foo-->
                         <?php if ( is_active_sidebar( 'sidebar-footer' ) ) : ?>
