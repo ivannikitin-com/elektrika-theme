@@ -92,7 +92,7 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 				</a>
 			
 	<?php	
-	//$fragments['a#cart_butt_footer'] = ob_get_clean();	
+	$fragments['a#cart_butt_footer'] = ob_get_clean();	
 	return $fragments;
 }
 if (class_exists('BeRocket_LGV')) {
