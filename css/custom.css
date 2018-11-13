@@ -2814,7 +2814,7 @@ select#shipping_option{
 .woocommerce-checkout .shop_table.woocommerce-checkout-review-order-table tfoot td{
 	border-top:0;
 }
-/* Сравнение и избранное */
+/* Сравнение и избранное Версия 13.11.2018 */
 .tm-woowishlist .tm-woowishlist-button{
 	display:none !important;
 }
