@@ -278,3 +278,9 @@ class UL_Class_Walker extends Walker_Nav_Menu {
     $output .= "\n$indent<ul class=\"level_".$display_depth."\">\n";
   }
 }
+/*Добавлено для возможности поиска по ID товара*/
+add_filter('relevanssi_content_to_index', 'rlv_index_post_id', 10, 2);
+function rlv_index_post_id($content, $post) {
+    $content .= " " . $post->ID;
+    return $content;
+}
