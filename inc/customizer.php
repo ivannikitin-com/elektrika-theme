@@ -51,6 +51,24 @@ function elektrika220_380_customize_register( $wp_customize ) {
 			'type' => 'text',
 		)
 	);	
+	$wp_customize->add_setting('middle_text_1', 
+		array('default' => '')
+	);
+	$wp_customize->add_control('middle_text_1', array(
+			'label' => 'Средняя колонка - верхняя строка',
+			'section' => 'section_one',
+			'type' => 'text',
+		)
+	);
+		$wp_customize->add_setting('middle_text_2', 
+		array('default' => '')
+	);
+	$wp_customize->add_control('middle_text_2', array(
+			'label' => 'Средняя колонка - нижняя строка',
+			'section' => 'section_one',
+			'type' => 'text',
+		)
+	);
 	$wp_customize->add_setting('header_banner_text', 
 		array('default' => '')
 	);

@@ -1,4 +1,3 @@
-/** v 13.11.2018 проблема со слвиянием */
 @charset "utf-8";
 
 html{
@@ -1987,8 +1986,7 @@ body .quantity.buttons_added input[type='number']{
 }
 
 /* Карточка товара */
-@media (max-width:991px){
-	
+@media (max-width:991px){	
 	.woocommerce.single-product #content .woocommerce-product-gallery.images,
 	.woocommerce.single-product #content div.product div.summary{
 		float:none;
@@ -2052,13 +2050,16 @@ body .quantity.buttons_added input[type='number']{
 	color:#000;
 	font-weight:normal;
 	padding:5px 0;
-	min-width:155px;	
+	/*min-width:155px;*/
 	background:#f3f3f3;
 }	
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active a,
 .woocommerce div.product .woocommerce-tabs ul.tabs li a:hover{
     background:#0051ba;
 	color:#fff;
+}
+.woocommerce .woocommerce-tabs table.shop_attributes th{
+	width:auto;
 }
 .woocommerce div.product .woocommerce-tabs ul.tabs:before,
 .woocommerce div.product .woocommerce-tabs ul.tabs li:before,

@@ -379,24 +379,25 @@ add_action( 'woocommerce_single_product_summary','elk_single_product_attributes'
 function elk_single_product_attributes(){
 	global $product;
 	/*wc_display_product_attributes($product); disabled*/
-	$brand_terms=get_the_terms( $product->get_ID(), 'product_brand'); 
-	 if ($brand_terms):  ?>
+	$brand_terms=get_the_terms( $product->get_ID(), 'product_brand'); ?>
 	<table class="shop_attributes">
-		<tbody><tr class="">
+		<tbody>
+	<?php if ($brand_terms):  ?>		
+		<tr class="">		
 		<th><?php _e('Производитель', 'woocommerce'); ?></th>
 			<?php $brand_term=$brand_terms[0]; 
 			$parent_id=get_up_parent_term($brand_term->term_id,'product_brand','id');
 			$parent_name=get_up_parent_term($brand_term->term_id,'product_brand','name')?>
 			<td><a href="<?php echo ($parent_id)?get_term_link( $parent_id, 'product_brand' ):get_term_link( $brand_term->term_id, 'product_brand' ); ?>"><?php echo $parent_name ;?></a></td>
 		</tr>
+<?php endif; ?>		
 		<tr class="">
 			<th><?php _e('Код товара', 'woocommerce'); ?></th>
 			<td><?php echo $product->get_id(); ?></td>
 		</tr>
 	</div></tbody>
 	</table>	
-<?php endif;
-}
+<?php }
 remove_action( 'woocommerce_single_product_summary','woocommerce_template_single_meta',40 );
 remove_action( 'woocommerce_single_product_summary','woocommerce_template_single_excerpt',20 );
 add_action( 'woocommerce_single_product_summary','elk_buy_1_click',40);

@@ -278,9 +278,21 @@ class UL_Class_Walker extends Walker_Nav_Menu {
     $output .= "\n$indent<ul class=\"level_".$display_depth."\">\n";
   }
 }
-/*Добавлено для возможности поиска по ID товара*/
-add_filter('relevanssi_content_to_index', 'rlv_index_post_id', 10, 2);
-function rlv_index_post_id($content, $post) {
-    $content .= " " . $post->ID;
-    return $content;
+/** 
+ * Добавлено для возможности поиска по ID товара
+ * https://www.relevanssi.com/knowledge-base/searching-post-id/ - не работает
+ */
+add_filter('relevanssi_custom_field_value', 'electrika_relevanssi_custom_field_value', 10, 3);
+function electrika_relevanssi_custom_field_value( $value, $field, $post_id ) 
+{
+	if ( $field != 'id' )
+		return $value;
+	
+	$value = str_pad( $post_id, 6, '0', STR_PAD_LEFT );
+	
+	// Отладка индексирования
+	$logFile = $_SERVER[ 'DOCUMENT_ROOT' ] . '/wp-content/relevanssi_content_to_index.log';
+	WP_DEBUG && file_put_contents( $logFile, $value . PHP_EOL, FILE_APPEND );
+	
+    return $value;
 }
