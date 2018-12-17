@@ -213,7 +213,7 @@ function woocommerce_subcategory_thumbnail( $category ) {
 			// Ref: https://core.trac.wordpress.org/ticket/23605
 			$image = str_replace( ' ', '%20', $image );
 
-			echo '<img src="' . esc_url( $image ) . '" alt="' . esc_attr( $category->name ) . '" width="" height="" />';
+			echo '<img src="' . esc_url( $image ) . '" alt="' . esc_attr( $category->name ) . '"/>';
 		}
 }
 

@@ -37,7 +37,7 @@
 						}
 					}
 					?>
-					<div class="num"><span class="wishlist-count"><?php echo (function_exists('tm_woocompare_get_list'))?$wishlist_count:''; ?></div>
+					<div class="num"><span class="wishlist-count"><?php echo (function_exists('tm_woocompare_get_list'))?$wishlist_count:''; ?></span></div>
 				</a>
             </div><!--/.cart_butt-->
 		</div><!--/#content-->
@@ -70,10 +70,10 @@
                     <div class="col-xs-6 col-md-3 column_f">
                         <div class="logo_foo">
                             <?php if (!is_front_page()) { ?>
-								<a class="logo" href="/" title="На Главную"><img src="<?php echo get_theme_mod('logo_header', ''); ?>" class="img-responsive"></a>
+								<a class="logo" href="/" title="На Главную"><img src="<?php echo get_theme_mod('logo_header', ''); ?>" class="img-responsive" alt="logo"></a>
 								<?php } else { ?>
                                 <!-- Для Главной страницы -->
-                                <span class="logo"><img src="<?php echo get_theme_mod('logo_header', ''); ?>" class="img-responsive"></span>
+                                <span class="logo"><img src="<?php echo get_theme_mod('logo_header', ''); ?>" class="img-responsive" alt="logo"></span>
 								<?php } ?>
                         </div><!--/.logo_foo-->
                         <?php if ( is_active_sidebar( 'sidebar-footer' ) ) : ?>
@@ -91,8 +91,8 @@
                     <div class="col-xs-6 col-md-3 contacts column_f">
 						<div class="payment">
 						<div class="menu_title ffrc">Принимаем к оплате:</div>
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/visa.jpg">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/mastercard.jpg">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/visa.jpg" alt="visa">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/mastercard.jpg" alt="mastercard">
                         </div>
                         <div class="socials text-center">
                             <a href="<?php echo get_theme_mod('twitter',''); ?>" class="tw" title="Мы в Twitter"></a>
