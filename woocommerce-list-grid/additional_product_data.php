@@ -13,13 +13,15 @@ $options = get_option('br_lgv_liststyle_option');
 			<div class="caption <?php echo ( ( @ $options['button']['lgv_link_simple']['custom_class'] ) ? $options['button']['lgv_link_simple']['custom_class'] : 'lgv_link lgv_link_simple' ) ?>"><a href="<?php the_permalink(); ?>" title="" class="woocommerce_shop_loop_item_title"><?php the_title(); ?></a></div>
 				 <div class="sku"><?php echo ( $sku = $product->get_sku() ) ? esc_html_e( 'SKU:', 'woocommerce' ).' '.$sku : '&nbsp;'; ?></div>
 				 <div class="breeder">
-				 <a href="#"><?php 
-				 $brand_terms=get_the_terms( $product->get_ID(), 'product_brand'); 
+				 <?php $brand_terms=get_the_terms( $product->get_ID(), 'product_brand'); 
 				 if ($brand_terms){
-					$brand_term=$brand_terms[0];
+					$brand_term=$brand_terms[0];?>
+				 <a href="<?php echo get_term_link( (int)$brand_term->term_id, $brand_term->taxonomy ); ?>">
+				 <?php 
 					echo get_up_parent_term($brand_term->term_id,'product_brand');
-				 }?>
+				 ?>
 				 </a>
+				 <?php } ?>
 			</div>
 		</div>
 		<div class="col-md-4 col-sm-4 col-xs-12">
