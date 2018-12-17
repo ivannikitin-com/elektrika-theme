@@ -83,9 +83,18 @@
                     </div>      
                 
                     <div class="col-xs-6 col-md-3 column_f">
-                        <a href="tel:<?php echo phone_clean(get_theme_mod('phone',''));?>" class="tel ffrc"><?php echo get_theme_mod('phone',''); ?></a>
-                        <div><a href="mailto:<?php echo get_theme_mod('email',''); ?>" class="mail"><?php echo get_theme_mod('email',''); ?></a></div>
-                        <div><a href="skype:<?php echo get_theme_mod('skype',''); ?>" class="skype"><?php echo get_theme_mod('skype',''); ?></a></div>
+						<?php $phone_f = get_theme_mod('phone','');
+						if ($phone_f) {?>
+                        <a href="tel:<?php echo phone_clean($phone_f);?>" class="tel ffrc"><?php echo $phone_f; ?></a>
+						<?php } ?>
+						<?php $email = get_theme_mod('email','');
+						if ($email) {?>
+                        <div><a href="mailto:<?php echo $email; ?>" class="mail"><?php echo $email; ?></a></div>
+						<?php } ?>
+						<?php $skype = get_theme_mod('skype','');
+						if ($skype) {?>
+                        <div><a href="skype:<?php echo $skype; ?>" class="skype"><?php echo $skype; ?></a></div>
+						<?php } ?>
                         <div><a href="/contacts/" class="map">Карта проезда</a></div>
                     </div>
                     <div class="col-xs-6 col-md-3 contacts column_f">
@@ -95,13 +104,34 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/img/mastercard.jpg" alt="mastercard">
                         </div>
                         <div class="socials text-center">
-                            <a href="<?php echo get_theme_mod('twitter',''); ?>" class="tw" title="Мы в Twitter"></a>
-                            <a href="<?php echo get_theme_mod('vk',''); ?>" class="vk" title="Мы в Вконтакте"></a>
-                            <a href="<?php echo get_theme_mod('facebook',''); ?>" class="fb" title="Мы в Facebook"></a>
-                            <a href="<?php echo get_theme_mod('livejournal',''); ?>" class="lj" title="livejournal"></a>
-                            <a href="<?php echo get_theme_mod('RSS',''); ?>" class="rss" title="RSS"></a>
-                            <a href="<?php echo get_theme_mod('mail',''); ?>" class="mail_s" title="Mail"></a>
-                            <a href="<?php echo get_theme_mod('email',''); ?>" class="ok" title="Одноклассники"></a>
+							<?php $twitter = get_theme_mod('twitter','');
+							if ($twitter) {?>
+                            <a href="<?php echo $twitter; ?>" class="tw" title="Мы в Twitter"></a>
+							<?php } ?>
+							<?php $vk = get_theme_mod('vk','');
+							if ($vk) {?>
+                            <a href="<?php echo $vk; ?>" class="vk" title="Мы в Вконтакте"></a>
+							<?php } ?>
+							<?php $facebook = get_theme_mod('facebook','');
+							if ($facebook) {?>							
+                            <a href="<?php echo $facebook; ?>" class="fb" title="Мы в Facebook"></a>
+							<?php } ?>
+							<?php $livejournal = get_theme_mod('livejournal','');
+							if ($livejournal) {?>
+                            <a href="<?php echo $livejournal; ?>" class="lj" title="livejournal"></a>
+							<?php } ?>
+							<?php $RSS = get_theme_mod('RSS','');
+							if ($RSS) {?>							
+                            <a href="<?php echo $RSS; ?>" class="rss" title="RSS"></a>
+							<?php } ?>
+                            <?php $mail = get_theme_mod('mail','');
+							if ($mail) {?>
+							<a href="<?php echo $mail; ?>" class="mail_s" title="Mail"></a>	
+							<?php } ?>
+							<?php $OK = get_theme_mod('OK','');
+							if ($OK) {?>							
+                            <a href="<?php echo $OK; ?>" class="ok" title="Одноклассники"></a>
+							<?php } ?>
                         </div>
                         </div>
                         <div class="col-xs-6 col-md-3 column_f">
