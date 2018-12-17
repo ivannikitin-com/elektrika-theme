@@ -103,8 +103,8 @@
                                     <span class="media-object icon_order"></span>
                                 </div>
                                 <div class="media-body">
-                               		<span class="title_h_m">Есть список нужных товаров?</span>
-                                    <span class="text-uppercase sub_title_h_">Принимаем заказы 24/7</span>
+                               		<span class="title_h_m"><?php echo get_theme_mod('middle_text_1',''); ?></span>
+                                    <span class="text-uppercase sub_title_h_"><?php echo get_theme_mod('middle_text_2',''); ?></span>
                                		<a href="#product-list" title="Отправьте смету" class="action" data-toggle="modal" >Отправьте смету</a>
                                	</div>
                     		</div><!--/.media-->
