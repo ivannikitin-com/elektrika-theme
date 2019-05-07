@@ -103,6 +103,7 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/img/visa.jpg" alt="visa">
                             <img src="<?php echo get_template_directory_uri(); ?>/img/mastercard.jpg" alt="mastercard">
                         </div>
+						<?php /*
                         <div class="socials text-center">
 							<?php $twitter = get_theme_mod('twitter','');
 							if ($twitter) {?>
@@ -133,6 +134,7 @@
                             <a href="<?php echo $OK; ?>" class="ok" title="Одноклассники"></a>
 							<?php } ?>
                         </div>
+						*/?>
                         </div>
                         <div class="col-xs-6 col-md-3 column_f">
                             <div class="menu_title ffrc">Задайте нам вопрос!</div>

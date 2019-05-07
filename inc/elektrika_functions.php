@@ -170,3 +170,6 @@ function elk_float_wishlist_button(){
 	echo $html;
 	wp_die();
 }*/
+
+// Delete shortlink
+remove_action('wp_head', 'wp_shortlink_wp_head', 10);

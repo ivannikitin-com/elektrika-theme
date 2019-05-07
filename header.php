@@ -15,7 +15,6 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
 <meta name="author" content="">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
@@ -78,7 +77,7 @@
 								<a class="logo" href="/" title="На Главную"><img src="<?php echo get_theme_mod('logo_header', ''); ?>" class="img-responsive"></a>
 								<?php } else { ?>
                                 <!-- Для Главной страницы -->
-                                <span class="logo"><img src="<?php echo get_theme_mod('logo_header', ''); ?>" class="img-responsive"></span>
+                                <span class="logo"><img src="<?php echo get_theme_mod('logo_header', ''); ?>" class="img-responsive" alt="logo"></span>
 								<?php } ?>
                             </div><!--/.logo_h-->
                         </div>
