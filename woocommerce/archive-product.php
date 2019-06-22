@@ -73,7 +73,7 @@ get_header( 'shop' ); ?>
 				'pad_counts'   => 1,
 				) ) );
 			?>
-			<?php if (!$product_categories): ?>
+			<?php if (!$product_categories && class_exists( 'BeRocket_LGV' ) ): ?>
 				<?php BeRocket_LGV::show_buttons_fix(); ?>
 			<?php endif; ?>
 
