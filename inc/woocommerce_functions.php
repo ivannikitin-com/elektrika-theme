@@ -802,8 +802,10 @@ function elk_custom_checkout_details( $order ){
 
 	}
 }
-remove_action( 'woocommerce_email_after_order_table', 'wooccm_add_payment_method_to_new_order', 10);
-add_action( 'woocommerce_email_after_order_table', 'elk_add_payment_method_to_new_order', 10, 3 );
+
+remove_action('woocommerce_email_after_order_table', 'wooccm_order_receipt_checkout_details', 10);
+//remove_action( 'woocommerce_email_after_order_table', 'wooccm_add_payment_method_to_new_order', 10);
+//add_action( 'woocommerce_email_after_order_table', 'elk_add_payment_method_to_new_order', 10, 3 );
 function elk_add_payment_method_to_new_order( $order, $sent_to_admin, $plain_text = '' ) {
 
 	$shipping = array(

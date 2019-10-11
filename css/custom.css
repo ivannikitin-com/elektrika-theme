@@ -64,7 +64,7 @@ a[href^='tel:']{
 .c_ffd633{
 	color:#ffd633;
 }
-.button, .woocommerce input.button{
+.button, .woocommerce input.button, .woocommerce button.button{
     display: inline-block;
 	font-family: 'Roboto Condensed', sans-serif;
 	font-size:18px;
@@ -101,6 +101,9 @@ img.alignright, img.alignleft{
 }
 .navbar-default .navbar-toggle:focus{
     background: #0051ba;
+}
+.widget_yith_wc_category_accordion ul li {
+	list-style-type: none;
 }
 /*Товары "Вы уже смотрели"*/
 .ced{
@@ -2567,6 +2570,27 @@ body .quantity.buttons_added input[type='number']{
 	font-weight:normal;
 }
 /*Checkout*/
+#alg-wc-checkout-files-upload-progress-wrapper-1 {
+	width:48%;
+	box-shadow: none;
+	border: none;
+	
+}
+#alg-wc-checkout-files-upload-progress-wrapper-1 .alg-wc-checkout-files-upload-progress-bar {
+	background-color: #f7f6f7;
+	border-radius:0;
+	box-shadow: none;
+}
+#alg-wc-checkout-files-upload-progress-wrapper-1 .alg-wc-checkout-files-upload-progress-status {
+	top: 5px;
+}
+
+@media (max-width: 768px){
+	#alg-wc-checkout-files-upload-progress-wrapper-1 {
+		width:100%;
+	}
+}
+
 .woocommerce-checkout ul#shipping_method li:first-child{
 	display:none;
 }
