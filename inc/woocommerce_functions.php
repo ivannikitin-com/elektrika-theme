@@ -96,7 +96,7 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 	return $fragments;
 }
 if (class_exists('BeRocket_LGV')) {
-add_action ( 'woocommerce_after_shop_loop_item', 'elk_additional_product_data' );
+	add_action ( 'woocommerce_after_shop_loop_item', 'elk_additional_product_data' );
 }
 function elk_additional_product_data(){
        if ( is_tax('product_tag') || is_tax('product_brand') ) {

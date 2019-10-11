@@ -88,7 +88,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				'taxonomy'     => 'product_brand',
 				'pad_counts'   => 1,
 			) ) ; ?>
-			<?php if (!$product_categories): ?>
+			<?php if (!$product_categories && class_exists( 'BeRocket_LGV' )): ?>
 			<?php BeRocket_LGV::show_buttons_fix(); ?>
 			<?php endif; ?>	
 			<?php if ( apply_filters( 'woocommerce_product_subcategories_hide_empty', true ) ) {
